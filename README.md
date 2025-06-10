@@ -38,20 +38,20 @@ This project utilizes a deep learning model to classify images of disasters into
 ## 🚀 How to Run the Project Locally
 This project has two main components: the **FastAPI backend** and the **Streamlit frontend**. You need to run both simultaneously in separate terminals for the full experience.
 
-### Step 1: Clone the Repository
+### 🔹 Step 1: Clone the Repository
 ```bash
-git clone [https://github.com/RichardDeanTan/Disaster-Image-Classification.git](https://github.com/RichardDeanTan/Disaster-Image-Classification.git)
-cd your-repo-name
+git clone https://github.com/RichardDeanTan/Disaster-Image-Classification.git
+cd Disaster-Image-Classification
 ```
 
-### Step 2: Install Dependencies
+### 🔹 Step 2: Install Dependencies
 Install all the necessary Python packages using the `requirements.txt` file.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 3: Run the Backend Server
+### 🔹 Step 3: Run the Backend Server
 In your first terminal, navigate to the project root and start the FastAPI server using Uvicorn.
 
 ```bash
@@ -60,7 +60,7 @@ uvicorn backend.main:app --reload
 
 The API server should now be running at `http://127.0.0.1:8000`.
 
-### Step 4: Run the Streamlit Frontend
+### 🔹 Step 4: Run the Streamlit Frontend
 Open a second terminal. Navigate to the project root and run the Streamlit app.
 
 ```bash
@@ -71,7 +71,7 @@ Your web browser should automatically open with the interactive application. In 
 
 ---
 
-### Alternative HTML/CSS/JS Frontend
+### 🔹 Alternative HTML/CSS/JS Frontend
 This repository also includes a basic web app built with HTML, CSS, and JavaScript located in the `frontend/` directory. This version is provided as a simple example of how a traditional web app could consume the FastAPI backend.
 
 To use it, you must first have the backend server running (Step 3). Then, you can simply open the `frontend/index.html` file in your web browser. Note that for the JavaScript `fetch` calls to work correctly, you might need to serve the files using a simple local server (like Python's `http.server` or the Live Server extension in VS Code) to avoid CORS issues.

@@ -223,7 +223,7 @@ def main():
                         st.error(f"❌ Connection failed: {e}")
         
         st.markdown("---")
-        st.info("Since you're studying Data Science and Web Development, this project is a great example of deploying a model via an API (backend) and consuming it with a web app (frontend).")
+        st.info("This project utilizes FastAPI as the backend to retrieve predictions from the model, while the streamlit is used to serve the frontend.")
 
 
     # --- Image Selection ---
@@ -322,6 +322,40 @@ def main():
         if st.button("🗑️ Clear Selected Sample"):
             st.session_state.selected_sample_path = None
             st.rerun()
+
+    # Bottom section
+    st.markdown("---")
+    st.header("Model Information")
+
+    col_info1, col_info2 = st.columns(2)
+
+    with col_info1:
+        st.subheader("Model Details")
+        st.write("""
+        This streamlit app is a demonstration of an EfficientNetB2 model (a pretrained model) used to classify images for Disaster Classification.
+        
+        This model is trained with:
+        - Oversampling Method
+        - Data Augmentation
+        - Fine-Tuning Model
+        
+        Oversampling was done only to the training dataset. Augmentation was done to training data generator, while testing and validation was only scaled.
+        """)
+
+    with col_info2:
+        st.subheader("Training Process")
+        st.write("""
+        Training Process includes:
+        1. Oversampling to balance classes
+        2. Data Augmentation with ImageDataGenerator (Rotation, Zoom, Horizontal Flip, etc)
+        3. Training with Adam Optimizer
+        4. Fine-Tuning by lowering learning rate and Unfreezing layers
+        
+        EfficientNetB2 model was trained with a total of 1500 images across 4 classes and achieved a training and testing accuracy of 96.99% and 95.38%.
+        """)
+        
+    st.markdown("---")
+    st.caption("© 2025 Disaster Image Classification | Created with Streamlit |  Author: Richard Dean Tanjaya ")
 
 
 if __name__ == "__main__":

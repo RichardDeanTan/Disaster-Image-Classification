@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Classification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Disaster Classification AI</h1>
+            <p>Upload an image or choose a sample to classify disaster types using deep learning</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Sample Images Section -->
+            <div class="sample-section">
+                <div class="sample-title">📂 Try Sample Images</div>
+                <div class="sample-grid">
+                    <div class="sample-item" data-type="Water_Disaster">
+                        <img src="samples/Water_Disaster.jpg" alt="Water Disaster" class="sample-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div style="display:none; padding:40px; background:#f0f0f0; border-radius:10px; color:#666;">🌊<br>Sample Image</div>
+                        <div class="sample-label">
+                            <span class="sample-icon">🌊</span>
+                            Water Disaster
+                        </div>
+                    </div>
+                    <div class="sample-item" data-type="Land_Slide">
+                        <img src="samples/Land_Slide.jpg" alt="Land Slide" class="sample-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div style="display:none; padding:40px; background:#f0f0f0; border-radius:10px; color:#666;">🏔️<br>Sample Image</div>
+                        <div class="sample-label">
+                            <span class="sample-icon">🏔️</span>
+                            Land Slide
+                        </div>
+                    </div>
+                    <div class="sample-item" data-type="Urban_Fire">
+                        <img src="samples/Urban_Fire.jpg" alt="Urban Fire" class="sample-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div style="display:none; padding:40px; background:#f0f0f0; border-radius:10px; color:#666;">🔥<br>Sample Image</div>
+                        <div class="sample-label">
+                            <span class="sample-icon">🔥</span>
+                            Urban Fire
+                        </div>
+                    </div>
+                    <div class="sample-item" data-type="Earthquake">
+                        <img src="samples/Earthquake.jpg" alt="Earthquake" class="sample-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div style="display:none; padding:40px; background:#f0f0f0; border-radius:10px; color:#666;">🌋<br>Sample Image</div>
+                        <div class="sample-label">
+                            <span class="sample-icon">🌋</span>
+                            Earthquake
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Drag & Drop your image here</div>
+                    <div class="upload-subtext">or click to browse files</div>
+                    <input type="file" id="fileInput" class="file-input" accept="image/*">
+                </div>
+            </div>
+
+            <div class="preview-section" id="previewSection">
+                <img id="imagePreview" class="image-preview" alt="Preview">
+                <div class="controls">
+                    <button class="btn btn-primary" id="predictBtn">🔍 Predict (Tuned Model)</button>
+                    <button class="btn btn-secondary" id="compareBtn">⚖️ Compare Models</button>
+                    <button class="btn btn-primary" id="clearBtn">🗑️ Clear</button>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing image...</p>
+            </div>
+
+            <div class="error" id="errorMsg"></div>
+
+            <div class="results-section" id="resultsSection"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

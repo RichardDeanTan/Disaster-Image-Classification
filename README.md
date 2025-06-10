@@ -2,8 +2,6 @@
 
 This project utilizes a deep learning model to classify images of disasters into four categories: **Earthquake**, **Land Slide**, **Urban Fire**, and **Water Disaster**. The application is built with a FastAPI backend to serve the model and a Streamlit frontend for interactive predictions and model comparison.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-streamlit-app-url.streamlit.app/)
-
 ## 💡 Features
 -   **Deep Learning Model**: Uses a powerful `EfficientNetB2` model fine-tuned for high accuracy on disaster images.
 -   **Model Comparison**: Interactively compare the performance of the model before and after fine-tuning on your own images.
@@ -77,6 +75,9 @@ Your web browser should automatically open with the interactive application. In 
 This repository also includes a basic web app built with HTML, CSS, and JavaScript located in the `frontend/` directory. This version is provided as a simple example of how a traditional web app could consume the FastAPI backend.
 
 To use it, you must first have the backend server running (Step 3). Then, you can simply open the `frontend/index.html` file in your web browser. Note that for the JavaScript `fetch` calls to work correctly, you might need to serve the files using a simple local server (like Python's `http.server` or the Live Server extension in VS Code) to avoid CORS issues.
+
+## 🚀 Run App from Streamlit
+#### 👉 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://richarddeantanjaya-disaster-image-classification.streamlit.app/)
 
 ## 🧠 Model Details
 -   **Base Model**: `effnet_before.keras` is the pre-trained EfficientNetB2 model from Keras, without any fine-tuning on the disaster dataset.

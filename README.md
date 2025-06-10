@@ -77,7 +77,8 @@ This repository also includes a basic web app built with HTML, CSS, and JavaScri
 To use it, you must first have the backend server running (Step 3). Then, you can simply open the `frontend/index.html` file in your web browser. Note that for the JavaScript `fetch` calls to work correctly, you might need to serve the files using a simple local server (like Python's `http.server` or the Live Server extension in VS Code) to avoid CORS issues.
 
 ## 🚀 Run App from Streamlit
-#### 👉 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://richarddeantanjaya-disaster-image-classification.streamlit.app/)
+Click the link below to run streamlit app without cloning repository:
+#### [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://richarddeantanjaya-disaster-image-classification.streamlit.app/)
 
 ## 🧠 Model Details
 -   **Base Model**: `effnet_before.keras` is the pre-trained EfficientNetB2 model from Keras, without any fine-tuning on the disaster dataset.

@@ -1,6 +1,9 @@
 # Disaster Image Classification
 
-This project utilizes a deep learning model to classify images of disasters into four categories: **Earthquake**, **Land Slide**, **Urban Fire**, and **Water Disaster**. The application is built with a FastAPI backend to serve the model and a Streamlit frontend for interactive predictions and model comparison.
+This project utilizes a deep learning model to classify images of disasters into four categories: **Earthquake**, **Land Slide**, **Urban Fire**, and **Water Disaster** from a public [Kaggle Dataset](https://www.kaggle.com/datasets/richarddeantanjaya/dataset-aol-dl/data). The application is built with a FastAPI backend to serve the model and a Streamlit frontend for interactive predictions and model comparison.
+
+Run our project from Streamlit:
+#### 👉[Disaster Classification Streamlit](https://richarddeantanjaya-disaster-image-classification.streamlit.app/)
 
 ## 💡 Features
 -   **Deep Learning Model**: Uses a powerful `EfficientNetB2` model fine-tuned for high accuracy on disaster images.
